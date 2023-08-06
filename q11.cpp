@@ -8,7 +8,7 @@ using namespace std;
 int nxt_sml_inx(int a[],int size,int b[])
 {
     stack<int> s;
-    for (int i=size;i>0;i--)
+    for (int i=size-1;i>=0;i--)
     {
         while (!s.empty() && a[i]>a[s.top()])
         {
@@ -32,7 +32,8 @@ int main()
     nxt_sml_inx(a,size,b);
     for (auto i :b)
     {
-        cout<<i<<endl;
+        cout<<i<<" ";
     }
+    cout<<endl;
     return 0;
 }
