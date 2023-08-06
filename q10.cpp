@@ -33,7 +33,7 @@ int main()
     nxt_sml_inx(a,size,b);
     for (auto i :b)
     {
-        cout<<i<<endl;
+        cout<<i<<" ";
     }
     return 0;
 }
