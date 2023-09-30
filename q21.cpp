@@ -1,12 +1,12 @@
 /*
 Given a sequence of n numbers and an integer k, design a linear time algorithm to
-compute the length of the maximum sum sub array , whos length is exactly k.
+compute the length of the maximum sum sub array , whos length is at most k.
 */
 #include <iostream>
 #include <vector>
 using namespace std;
 
-vector<int> max_sum(int a[], int k, int size) {
+vector<int> max_sum_atmostk(int a[], int k, int size) {
   vector<int> vec;
   int sum = 0,maximum=0;
   for(int l = 0, r= 0;r < size;r++) {
@@ -36,7 +36,7 @@ int main() {
   int a[] = {2, -4, 6, 3, 1, -9, 4, -1};
   int k = 4;
   int size = sizeof(a) / sizeof(a[0]);
-  vector <int> vec = max_sum(a, k, size);
+  vector <int> vec = max_sum_atmostk(a, k, size);
   for(int i = 0;i< vec.size();i++) cout<<vec[i]<<" ";
   cout<<endl;
   return 0;
